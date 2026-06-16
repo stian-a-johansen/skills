@@ -61,7 +61,7 @@ Prompts for:
 
 | Field | Required | Notes |
 |-------|----------|-------|
-| Bearer Token | Yes | console.x.com → Keys and tokens |
+| Bearer Token | Yes | console.x.com: Keys and tokens |
 | Default List ID | No | Optional convenience default |
 
 Re-run any time to update. Existing values are shown as defaults.
@@ -87,7 +87,7 @@ const { tweets, users } = await fetchAllListTweets('1234567890', { maxTweets: 20
 | Option | Default | Description |
 |--------|---------|-------------|
 | `maxResults` | `20` | Tweets per page, max 100 |
-| `paginationToken` | — | Token from previous response |
+| `paginationToken` | None | Token from previous response |
 
 Returns:
 
