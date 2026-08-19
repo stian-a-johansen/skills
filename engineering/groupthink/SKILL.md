@@ -1,6 +1,6 @@
 ---
 name: groupthink
-description: Run a multi-agent co-editing workflow for non-trivial implementation work. Use Codex for a pre-code plan review and post-diff review, then use Opencode with Claude or another different model family for a final review before reporting done.
+description: Run a multi-agent co-editing workflow for non-trivial implementation work. Use Codex for a pre-code plan review and post-diff review, then use Opencode with Kimi K3 or another different model family for a final review before reporting done.
 ---
 
 # Groupthink
@@ -15,7 +15,7 @@ Required loop:
 4. Implement the corrected plan.
 5. Test or run the changed behavior.
 6. Ask Codex to review the applied diff.
-7. Ask Opencode with Claude, or another different model family, for a final review.
+7. Ask Opencode with Kimi K3, or another different model family, for a final review.
 8. Fix real issues and repeat review only for changed areas.
 9. Report the result, evidence, and residual risks.
 
@@ -81,10 +81,10 @@ Apply clear defects. Flag scope expansion to the user.
 
 ## Final Review
 
-Use a different model family through Opencode, usually Claude:
+Use a different model family through Opencode, for example Kimi K3 for uncensored output:
 
 ```bash
-opencode run -m <provider>/<claude_model> --dir <repo_dir> "$(cat <review_prompt_file>)" < /dev/null
+opencode run -m <provider>/<kimi_model> --dir <repo_dir> "$(cat <review_prompt_file>)" < /dev/null
 ```
 
 If the model id is unknown, run:
